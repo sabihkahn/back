@@ -126,12 +126,13 @@ app.delete("/delete-product/:id", async (req, res) => {
     console.error("Delete error:", err);
     res.status(500).json({ success: false, message: "Internal server error" });
   }
-
+  
 });
 
 
 
-
-
+app.listen(3000, () => {
+  console.log("server is started");
+});
 
 export default app;
